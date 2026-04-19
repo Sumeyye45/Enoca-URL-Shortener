@@ -62,7 +62,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JWT (Bonus için bırakıyoruz) -->
+
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
