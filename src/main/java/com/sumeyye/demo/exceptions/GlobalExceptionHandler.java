@@ -12,14 +12,14 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    // ❌ 404 - Not Found
+    // 404 - Not Found
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<String> handleNotFound(ResourceNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(ex.getMessage());
     }
 
-    // ❌ 400 - Validation error
+    //  400 - Validation error
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> handleValidation(MethodArgumentNotValidException ex) {
 
@@ -32,7 +32,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
     }
 
-    // ❌ fallback error
+    // fallback error
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleGeneral(Exception ex) {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
