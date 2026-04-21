@@ -1,17 +1,18 @@
-package dtos.Response;
+package dto.response;
 
-import lombok.Builder;
 
 
 import java.time.LocalDateTime;
 
 
-@Builder
 public class UrlDetailResponse {
     private String originalUrl;
     private String shortCode;
     private long clickCount;
     private LocalDateTime createdAt;
+
+    public UrlDetailResponse(String originalUrl, String shortCode, long clickCount, LocalDateTime createdAt) {
+    }
 
     public String getOriginalUrl() {
         return originalUrl;

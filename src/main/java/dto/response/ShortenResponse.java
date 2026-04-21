@@ -1,13 +1,17 @@
-package dtos.Response;
+package dto.response;
 
-import lombok.Builder;
-import lombok.Data;
 
-@Data
-@Builder
 public class ShortenResponse {
 
     private String shortUrl;
+
+    public ShortenResponse(String shortUrl) {
+        this.shortUrl = shortUrl;
+    }
+
+    public ShortenResponse() {
+
+    }
 
     public String getShortUrl() {
         return shortUrl;
@@ -16,4 +20,8 @@ public class ShortenResponse {
     public void setShortUrl(String shortUrl) {
         this.shortUrl = shortUrl;
     }
+
+
+
+
 }

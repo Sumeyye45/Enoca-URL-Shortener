@@ -1,4 +1,4 @@
-package com.sumeyye.demo.exceptions;
+package com.sumeyye.demo.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
